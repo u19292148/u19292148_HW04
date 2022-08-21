@@ -1,0 +1,173 @@
+﻿@model List<u19292148_HW04.Models.Product>
+@{
+    ViewBag.Title = "Shop";
+}
+
+<h2 class="center-text">Shop</h2>
+
+<div class="container mx-auto">
+    <h2>Break down period of paper and plastic products</h2>
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-4">
+            <h5>PLASTIC BAG</h5>
+            <p class="counter">0</p>
+            <h5>YEARS</h5>
+        </div>
+        <div class="col-lg-4">
+            <h5>COFFEE CUPS</h5>
+            <p class="counter2">0</p>
+            <h5>YEARS</h5>
+        </div>
+        <div class="col-lg-4">
+            <h5>STRAWS</h5>
+            <p class="counter1">0</p>
+            <h5>YEARS</h5>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<h4>As you can see, these 3 products take years to break down. This has a very bad impact on the ocean.
+    Be part of the change and go plastic free. Buy one of these products to support the NPO to fight and help
+    against the impact that plastic has on our oceans. Take note that these products come from 3 different manufactures,
+    so you have to go back and buy the other products if you want to buy more than one product.</h4>
+<br />
+<div class="container">
+    <div class="row mx-auto">
+        <div class="flip-card col-lg-4">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="~/Media/cup.jpeg" id="img1" style="height: 298px; width: 300px;" />
+                </div>
+                <div class="flip-card-back">
+                    <h4>The reusable cup is made of recycled material. Rather than getting a paper coffee cup when you go
+                    to your favourite coffee shop, you can now take your reusable cup with you. 
+                    You can customize your mug by adding your name or one of your favourite qoutes.
+                    The money recieved from this purchase will go straight to the Plastic Tides NPO.</h4>
+                    <h4>
+                        Price: R250
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card col-lg-4">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="~/Media/straw.jpeg" id="img2" style="height: 298px; width: 300px;" />
+                </div>
+                <div class="flip-card-back">
+                    <h4>
+                        The straw is made of stainless steel. Therefore this product will last a very long time and
+                        it is easy to clean. Rather than using the paper straws, you can now take your stainless steel
+                        straw with you to any place. You can select different colours when buying the product. Take note
+                        that you only get one straw when buying this product. The money recieved from this purchase will 
+                        go straight to the PlasticTides NPO.
+                    </h4>
+                    <h4>Price: R100</h4>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card col-lg-4">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="~/Media/bag.jpeg" id="img3" style="height: 298px; width: 300px;" />
+                </div>
+                <div class="flip-card-back">
+                    <h4>
+                        The reusable bag is made of recycable material. Stop using plastic bags when you go top the
+                        shop. Get yourself a reusable bag. You will not only save money over the long run but you will
+                        also save the plannet. When buying this product you can select a pattern design for your bag.
+                        Unfortunatly the bag will only come in the colour as seen on the image. The colour of the pattern
+                        will be black. The money recieved from this purchase will
+                        go straight to the PlasticTides NPO.
+                    </h4>
+                    <h4>Price: R350</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div class="row">
+    <a class="btn btn-primary" href="@Url.Action("Display","Home")" style="background-color: #2e5cb8">Buy</a>
+</div>
+
+@section Scripts{
+    <script type="text/javascript" src="~/Scripts/JQ/code1.js">
+
+    </script>
+}
+
+
+<style>
+    .counter {
+        /*position: relative;*/
+        color: white;
+        font-size: 4em;
+        font-weight: 700;
+        z-index: 1;
+    }
+
+    .counter1 {
+        /*position: relative;*/
+        color: white;
+        font-size: 4em;
+        font-weight: 700;
+        z-index: 1;
+    }
+
+    .counter2 {
+        /*position: relative;*/
+        color: white;
+        font-size: 4em;
+        font-weight: 700;
+        z-index: 1;
+    }
+
+
+    .flip-card {
+        background-color: transparent;
+        width: 350px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+        background-color: white;
+        color: black;
+    }
+
+    .flip-card-back {
+        background-color: #2e5cb8;
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+    h5,p,h2,h4{
+        color:white;
+    }
+</style>
+

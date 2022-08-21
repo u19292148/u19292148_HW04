@@ -1,0 +1,31 @@
+﻿@model List<u19292148_HW04.Models.Product>
+@{
+    ViewBag.Title = "Invoice";
+}
+
+<h2>Invoice</h2>
+
+@foreach (var product in Model)
+{
+<div>
+    <p>
+        Thank you <b>@product.Name @product.Surname</b> for purchasing one of the products. Your contribution means a lot. You are now part of the plastic
+        free future. Below is your invoice.
+    </p>
+    <h4>Type: @product.Type</h4>
+    <h4>Quantity: @product.Qty</h4>
+    <h4>Total: R @product.getPrice()</h4>
+    <h4>Delevery address: @product.Address</h4>
+    <h4>Extra selection: @product.getSelect()</h4>
+
+
+</div>
+}
+
+<a class="btn btn-primary" href="@Url.Action("Shop","Home")" style="background-color: #2e5cb8">Continue shopping</a>
+
+<style>
+    p,h4,h2{
+        color:white;
+    }
+</style>

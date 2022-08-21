@@ -1,0 +1,109 @@
+﻿@model List<u19292148_HW04.Models.Product>
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display</h2>
+
+
+@using (Html.BeginForm("Display", "Home", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="prodType">Choose product</label>
+        <select class="form-control" id="prodType" name="type">
+            <option value="Straw">Straw</option>
+            <option value="Cup">Cup</option>
+            <option value="Bag">Bag</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="surname">Surname:</label>
+        <input type="text" name="surname" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" name="email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" name="address" class="form-control" />
+    </div>
+    <div class="form-group col">
+        <label for="colour">Colour:</label>
+        <select class="form-control" name="col" id="col">
+            <option value="#ff0000">Red</option>
+            <option value="#ff8000">Orange</option>
+            <option value="#ffff00">Yellow</option>
+            <option value="#40ff00">Green</option>
+            <option value="#00ffff">Light Blue</option>
+            <option value="#0000ff">Dark Blue</option>
+            <option value="#8000ff">Purple</option>
+            <option value="#ff00ff">Pink</option>
+        </select>
+    </div>
+    <div class="form-group pat">
+        <label for="pattern">Pattern:</label>
+        <select class="form-control" name="pat" id="pat">
+            <option>Lines</option>
+            <option>Squares</option>
+            <option>Triangles</option>
+            <option>Rectangles</option>
+            <option>Circles</option>
+        </select>
+    </div>
+    <div class="form-group qoute">
+        <label for="qoute">Qoute on cup</label>
+        <textarea class="form-control" id="qoute" name="qoute" rows="4"></textarea>
+    </div>
+    <div class="form-group sprice">
+        <label for="price">Price:</label>
+        <span id="price">R100</span>
+    </div>
+    <div class="form-group cprice">
+        <label for="price">Price:</label>
+        <span id="price">R250</span>
+    </div>
+    <div class="form-group bprice">
+        <label for="price">Price:</label>
+        <span id="price">R350</span>
+    </div>
+
+    <div class="form-group">
+        <label>Quantity:</label>
+        <input type="number" name="qty" class="form-control" min="1" max="10" id="qty" />
+    </div>
+    <div class="row">
+        <a class="btn btn-primary" href="@Url.Action("Shop","Home")" style="background-color: #2e5cb8">Back</a>
+        <button type="submit" class="btn btn-primary" style="background-color: #2e5cb8">Submit</button>
+
+    </div>
+    
+}
+
+@section Scripts {
+
+    <script type="text/javascript" src="~/Scripts/JQ/code2.js" asp-append-version="true"></script>
+
+}
+
+<style>
+    label, h2, p, span {
+        color: white;
+    }
+
+    input {
+        background-color: #eaeffa;
+    }
+
+    select {
+        background-color: #eaeffa;
+    }
+</style>

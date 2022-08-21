@@ -1,0 +1,1 @@
+﻿$('#img').css("left", "-650px").delay(800).animate({ left: '30px' }, 400);
